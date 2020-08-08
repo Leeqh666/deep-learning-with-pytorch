@@ -1,0 +1,2 @@
+# 使用张量表示真实数据
+<ul style="user-select: auto;"><li style="user-select: auto;">将不同类型的现实世界数据表示为PyTorch张量</li><li style="user-select: auto;">处理各种数据类型，包括电子表格、时间序列、文本、图像和医学成像</li><li style="user-select: auto;">从文件加载数据</li><li style="user-select: auto;">将数据转换为张量</li><li style="user-select: auto;">调整张量以便于它们可以用作神经网络模型的输入</li></ul>
