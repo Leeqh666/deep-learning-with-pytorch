@@ -24,6 +24,8 @@ Python列表或数字元组（tuple）是在内存中单独分配的Python对象
 用下标i和j访问二维张量等价于访问存储中的storage_offset + stride[0] * i + stride[1] * j元素。偏移通常为零，但如果此张量是一个可容纳更大张量的存储的视图，则偏移可能为正值。
 
 从最右边的维开始将其值存放在存储中的张量（例如沿着行存放在存储中的二维张量）定义为连续（Contiguous）张量。可以使用contiguous方法从非连续张量获得新的连续张量。 张量的内容保持不变，但步长发生变化，存储也是。
+
+PyTorch中称为高级索引（advanced indexing）的功能，可以使用0/1张量来索引数据张量。此张量本质上将数据筛选为仅与索引张量中的1对应的元素（或行）。
 ## 数据类型
 张量构造函数（即tensor、ones、zeros之类的函数）的dtype参数指定了张量中的数据类型。数据类型指定张量可以容纳的可能值（整数还是浮点数）以及每个值的字节数。
 <ul style="user-select: auto;"><li style="user-select: auto;"><code style="user-select: auto;">torch.float32</code>或<code style="user-select: auto;">torch.float</code> —— 32位浮点数</li><li style="user-select: auto;"><code style="user-select: auto;">torch.float64</code>或<code style="user-select: auto;">torch.double</code> —— 64位双精度浮点数 </li><li style="user-select: auto;"><code style="user-select: auto;">torch.float16</code>或<code style="user-select: auto;">torch.half</code> —— 16位半精度浮点数</li><li style="user-select: auto;"><code style="user-select: auto;">torch.int8</code> —— 带符号8位整数</li><li style="user-select: auto;"><code style="user-select: auto;">torch.uint8</code> —— 无符号8位整数</li><li style="user-select: auto;"><code style="user-select: auto;">torch.int16</code>或<code style="user-select: auto;">torch.short</code> —— 带符号16位整数</li><li style="user-select: auto;"><code style="user-select: auto;">torch.int32</code>或<code style="user-select: auto;">torch.int</code> —— 带符号32位整数</li><li style="user-select: auto;"><code style="user-select: auto;">torch.int64</code>或<code style="user-select: auto;">torch.long</code> —— 带符号64位整数</li></ul>
